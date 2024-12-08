@@ -3,7 +3,13 @@ package com.example.examen
 import java.io.File
 
 class TransactionRepository(private val fileName: String) {
-
+    init {
+        val file = File(fileName)
+        if (!file.exists()) file.createNewFile()
+        if (!file.canWrite()) {
+            throw IllegalStateException("No se puede escribir en el archivo $fileName")
+        }
+    }
     fun addTransaction(transaction: Transaction) {
         val file = File(fileName)
         file.appendText("${transaction.id},${transaction.date},${transaction.amount},${transaction.paymentMethod},${transaction.frequency},${transaction.userId}\n")
