@@ -58,7 +58,7 @@ fun createUser(userRepo: UserRepository, scanner: Scanner) {
 
     val user = User(id, email, birthday, country, preferences, income, password, isPremium)
     userRepo.addUser(user)
-    println("Usuario creado con éxito.")
+    println("Usuario creado con exito.")
 }
 
 fun viewAllUsers(userRepo: UserRepository) {
@@ -93,7 +93,7 @@ fun updateUser(userRepo: UserRepository, scanner: Scanner) {
     user.isPremium = if (scanner.nextLine().lowercase() == "yes") "yes" else "No"
 
     userRepo.updateUser(user)
-    println("Usuario actualizado con éxito.")
+    println("Usuario actualizado con exito.")
 }
 
 fun deleteUser(userRepo: UserRepository, transactionRepo: TransactionRepository, scanner: Scanner) {
@@ -113,7 +113,7 @@ fun deleteUser(userRepo: UserRepository, transactionRepo: TransactionRepository,
     }
 
     userRepo.deleteUser(id)
-    println("Usuario y sus transacciones eliminados con éxito.")
+    println("Usuario y sus transacciones eliminados con exito.")
 }
 
 fun viewUserTransactions(transactionRepo: TransactionRepository, scanner: Scanner) {
@@ -168,11 +168,11 @@ fun updateTransaction(transactionRepo: TransactionRepository, scanner: Scanner) 
     transaction.paymentMethod = scanner.nextLine()
 
     transactionRepo.updateTransaction(transaction)
-    println("Transaccion actualizada con éxito.")
+    println("Transaccion actualizada con exito.")
 }
 
 fun deleteTransaction(transactionRepo: TransactionRepository, scanner: Scanner) {
-    println("\n--- Eliminar Transacción ---")
+    println("\n--- Eliminar Transaccion ---")
     print("Id transaction to delete: ")
     val id = scanner.nextLine()
     val transaction = transactionRepo.getTransactionById(id)
