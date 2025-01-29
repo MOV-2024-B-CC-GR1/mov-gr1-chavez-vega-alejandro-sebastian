@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Vaultix</string>
+    <string name="login">Ingresa con tu usuario </string>
+    <string name="finger">Ingresa con tu biometrico</string>
+    <string name="help">Ayuda</string>
+    <string name="slogan">Track Smart </string>
+    <string name="slogan2">Spend Wise </string>
+    <string name="Welcome">Hello,</string>
+    <string name="Welcome2">We are happy to see you again</string>
+    <string name="signup">Sign Up</string>
+    <string name="location">Location</string>
+    <string name="knowus">Know Us</string>
+    <string name="client">Clientes</string>
+
+</resources>
