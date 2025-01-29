@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Vaultix"
+rootProject.name = "CRUD"
 include(":app")

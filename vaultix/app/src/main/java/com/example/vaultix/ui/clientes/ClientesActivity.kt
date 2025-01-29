@@ -1,4 +1,5 @@
-package com.example.vaultix
+package com.example.vaultix.ui.clientes
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.*
@@ -6,9 +7,18 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ccgr12024b_gasm.R
+
+import com.example.vaultix.database.DatabaseHelper
+import com.example.vaultix.model.Cliente
+import com.example.vaultix.ui.pedidos.PedidosActivity
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
-class ClientActivity : AppCompatActivity() {
+/**
+ * Actividad para mostrar y gestionar la lista de clientes.
+ * Permite ver, agregar, actualizar, eliminar clientes y ver sus pedidos.
+ */
+class ClientesActivity : AppCompatActivity() {
 
     private lateinit var dbHelper: DatabaseHelper
     private lateinit var recyclerViewClientes: RecyclerView
@@ -70,6 +80,7 @@ class ClientActivity : AppCompatActivity() {
                     email = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CLIENTE_EMAIL)),
                     telefono = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CLIENTE_TELEFONO)),
                     activo = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseHelper.CLIENTE_ACTIVO)) == 1,
+                    premium = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseHelper.CLIENTE_PREMIUM)) == 1, // Nuevo campo
                     fechaRegistro = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CLIENTE_FECHA_REGISTRO))
                 )
                 clientesList.add(cliente)

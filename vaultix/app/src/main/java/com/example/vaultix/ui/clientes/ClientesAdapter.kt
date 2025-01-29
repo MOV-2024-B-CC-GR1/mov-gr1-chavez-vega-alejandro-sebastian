@@ -1,10 +1,15 @@
-package com.example.vaultix
+package com.example.vaultix.ui.clientes
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ccgr12024b_gasm.R
+
+import com.example.vaultix.model.Cliente
 
 /**
  * Adaptador para manejar la lista de clientes en un RecyclerView.
@@ -12,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
  * @property clientes Lista de clientes que se mostrarán.
  * @property onItemClick Callback que se ejecuta al hacer clic en un cliente.
  */
-class ClientAdapter(
+class ClientesAdapter(
     private val clientes: List<Cliente>,
     private val onItemClick: (Cliente) -> Unit
 ) : RecyclerView.Adapter<ClientesAdapter.ClienteViewHolder>() {
@@ -26,6 +31,7 @@ class ClientAdapter(
         val tvNombre: TextView = view.findViewById(R.id.tvNombre)
         val tvEmail: TextView = view.findViewById(R.id.tvEmail)
         val tvTelefono: TextView = view.findViewById(R.id.tvTelefono)
+        val ivPremium: ImageView = view.findViewById(R.id.swPremium) // Icono para clientes premium
     }
 
     /**
@@ -52,6 +58,16 @@ class ClientAdapter(
         holder.tvNombre.text = cliente.nombre
         holder.tvEmail.text = cliente.email
         holder.tvTelefono.text = cliente.telefono
+
+        // Si el cliente es premium, mostramos el icono e incluso podemos cambiar el color del nombre
+        if (cliente.premium) {
+            holder.ivPremium.visibility = View.VISIBLE
+            holder.tvNombre.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.estado_completado))
+        } else {
+            holder.ivPremium.visibility = View.GONE
+            holder.tvNombre.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.black))
+        }
+
         holder.itemView.setOnClickListener { onItemClick(cliente) }
     }
 
