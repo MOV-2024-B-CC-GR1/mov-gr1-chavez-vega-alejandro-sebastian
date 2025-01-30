@@ -138,8 +138,8 @@ class ClientesActivity : AppCompatActivity() {
     }
 
     /**
-     * Inicia la actividad de pedidos para un cliente seleccionado.
-     * @param cliente Cliente cuyos pedidos se desean ver.
+     * Inicia la actividad de transaccion para un cliente seleccionado.
+     * @param cliente Cliente cuyos transaccion se desean ver.
      */
     private fun verTransaction(cliente: Cliente) {
         val intent = Intent(this, TransactionActivity::class.java)
