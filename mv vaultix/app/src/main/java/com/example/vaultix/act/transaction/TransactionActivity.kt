@@ -31,7 +31,7 @@ class TransactionActivity : AppCompatActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pedidos)
+        setContentView(R.layout.activity_transaction)
 
         dbHelper = DatabaseHelper(this)
         recyclerViewTransactions = findViewById(R.id.recyclerViewTransactions)

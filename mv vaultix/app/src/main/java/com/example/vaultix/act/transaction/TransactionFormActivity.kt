@@ -31,7 +31,7 @@ class TransactionFormActivity : AppCompatActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pedido_form)
+        setContentView(R.layout.activity_transaction_form)
 
         setupViews()
         loadData()
