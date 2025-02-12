@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CRUD App</string>
+    <string name="gestion_cliente">Cliente</string>
+    <string name="guardar">Guardar</string>
+    <string name="nombre_hint">Nombre</string>
+    <string name="correo_hint">Correo electrónico</string>
+    <string name="telefono_hint">Teléfono</string>
+    <string name="activo">Activo</string>
+    <string name="formulario_pedido">Pedido</string>
+    <string name="descripcion_hint">Descripción</string>
+    <string name="estado_hint">Estado</string>
+    <string name="titulo_principal">CRUD</string>
+    <string name="gestion_clientes">Clientes</string>
+</resources>
