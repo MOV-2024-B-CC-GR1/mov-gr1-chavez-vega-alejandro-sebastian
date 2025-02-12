@@ -9,6 +9,6 @@
     <string name="formulario_pedido">Pedido</string>
     <string name="descripcion_hint">Descripción</string>
     <string name="estado_hint">Estado</string>
-    <string name="titulo_principal">CRUD</string>
+    <string name="titulo_principal">Vaultix</string>
     <string name="gestion_clientes">Clientes</string>
 </resources>
